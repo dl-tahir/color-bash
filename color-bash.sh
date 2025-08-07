@@ -1,5 +1,9 @@
-mv ~/.bashrc ~/.bashrc.bkp
-cp bashrc ~/.bashrc
-source ~/.bashrc
+#!/bin/bash
+mv ~/.bashrc ~/.bashrc.bkp || true
+echo "Backup done for ~/.bashrc"
 
-echo "✅ Colored Bash prompt applied
+cp bashrc ~/.bashrc
+echo "Copied colorful bashrc to ~/.bashrc"
+
+source ~/.bashrc
+echo "✅ Colored Bash prompt applied"
