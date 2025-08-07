@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv ~/.bashrc ~/.bashrc.bkp || true
+mv ~/.bashrc ~/.bashrc.bkp
 echo "Backup done for ~/.bashrc"
 
 cp bashrc ~/.bashrc
