@@ -4,6 +4,12 @@ GREEN='\[\033[01;32m\]'
 BLUE='\[\033[01;34m\]'
 RESET='\[\033[00m\]'
 
+
+Username=$RED
+Hostname=$GREEN
+DirectoryPath=$BLUE
+Reset=$RESET       #Default
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -63,7 +69,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}'"$RED"'\u'"$GREEN"'@\h:'"$BLUE"'\w'"$RESET"'\$ '
+    PS1='${debian_chroot:+($debian_chroot)}'"$Username"'\u'"$Hostname"'@\h:'"$DirectoryPath"'\w'"$Reset"'\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
